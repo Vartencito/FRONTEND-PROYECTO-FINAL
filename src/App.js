@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import Imagen from './components/Imagen';
+import Description from './components/Description';
+// import axios from 'axios';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+  /*axios.get(url)
+  .then(function(response{
+  }) //cuando termine de hacer la petición
+  .catch(function (error){
+  //manejar el error
+  })
+  .then(function(){
+  //lo que se ejecuta siempre
+  })*/
+  
+
+
+const publication = 
+{
+url: "https://i.imgur.com/3ZNfQJW.jpeg",
+user: "sa",
+description: "ddd"
+}
+
+return (
+<>
+<div className="container-fluid" >
+<div className="text-center-center">
+      <Imagen url={publication.url} />
+      <Description description={publication.description} />
+</div>
+</div>
+</>
   );
 }
 
